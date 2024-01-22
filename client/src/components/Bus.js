@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo.PNG";
 import moment from "moment";
 
 function Bus({ bus }) {
@@ -60,7 +60,7 @@ function Bus({ bus }) {
 
             <div className="text-sm mx-2 flex flex-col">
               <p className="font-bold text-base">Price</p>
-              <p className="font-base">{bus.price} DH</p>
+              <p className="font-base">{bus.price} INR</p>
             </div>
           </div>
           <div className="md:border-l-2 mx-6 md:border-dotted flex flex-row py-4 mr-6 flex-wrap">

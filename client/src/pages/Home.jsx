@@ -68,7 +68,7 @@ function Home() {
             </Col>
             <Col lg={12} sm={24}>
               <select
-                className="mb-5 select select-primary bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-white dark:text-white "
+                className="mb-5 select select-primary bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-white dark:text-white"
                 onChange={(e) => {
                   setFilters({ ...filters, to: e.target.value });
                 }}
@@ -85,7 +85,7 @@ function Home() {
             </Col>
             <Col lg={24} sm={24}>
               <input
-                className="mb-5 input input-primary bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-white dark:text-white "
+                className="mb-5 input input-primary bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-white dark:text-white"
                 min={new Date().toISOString().split("T")[0]}
                 type="date"
                 placeholder="Date"

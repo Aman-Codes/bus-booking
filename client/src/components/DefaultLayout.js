@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo.PNG";
 
 function DefaultLayout({ children }) {
   const navigate = useNavigate();
@@ -60,9 +60,9 @@ function DefaultLayout({ children }) {
 
   return (
     <div className="flex w-full">
-      <div className="h-screen sticky top-0 flex flex-col bg-gray-800 shadow justify-start px-5 py-0 ">
+      <div className="h-screen sticky top-0 flex flex-col bg-brown shadow justify-start px-5 py-0 ">
         <div className="flex flex-col justify-start items-center p-5">
-          <div className="bg-gray-800 w-full ">
+          <div className="bg-brown w-full ">
             {collapsed ? (
               <i
                 className="ri-menu-2-fill cursor-pointer text-[30px] text-white"
@@ -122,7 +122,7 @@ function DefaultLayout({ children }) {
         </div>
       </div>
       <div className="w-full">
-        <div className="bg-gray-800 flex flex-col justify-start items-center py-2">
+        <div className="bg-brown flex flex-col justify-start items-center py-2">
           <img
             onClick={() => navigate("/")}
             src={logo}

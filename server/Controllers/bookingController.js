@@ -7,15 +7,6 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 const moment = require("moment");
 
-// nodemailer transporter
-let transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD,
-  },
-});
-
 // book seat and send email to user with the booking details
 const BookSeat = async (req, res) => {
   try {
@@ -30,28 +21,6 @@ const BookSeat = async (req, res) => {
     bus.seatsBooked = [...bus.seatsBooked, ...req.body.seats]; // add the booked seats to the bus seatsBooked array in the database
 
     await bus.save();
-    // send email to user with the booking details
-    let mailOptions = {
-      from: process.env.EMAIL,
-      to: user.email,
-      subject: "Booking Details",
-      text: `Hello ${user.name}, your booking details are as follows:
-      Bus: ${bus.name}
-      Seats: ${req.body.seats}
-      Departure Time: ${moment(bus.departure, "HH:mm:ss").format("hh:mm A")}
-      Arrival Time: ${moment(bus.arrival, "HH:mm:ss").format("hh:mm A")}
-      Journey Date: ${bus.journeyDate}
-      Total Price: ${bus.price * req.body.seats.length} MAD
-      Thank you for choosing us! 
-      `,
-    };
-    transporter.sendMail(mailOptions, (err, data) => {
-      if (err) {
-        console.log("Error Occurs", err);
-      } else {
-        console.log("Email sent!!!");
-      }
-    });
     res.status(200).send({
       message: "Seat booked successfully",
       data: newBooking,

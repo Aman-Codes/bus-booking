@@ -16,10 +16,7 @@ const AdminUsers = lazy(() => import("./pages/Admin/AdminUsers"));
 const Home = lazy(() => import("./pages/Home"));
 const BookNow = lazy(() => import("./pages/BookNow"));
 const Bookings = lazy(() => import("./pages/Bookings"));
-const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
-const UpdatePassword = lazy(() => import("./pages/UpdatePassword"));
 const EmailSent = lazy(() => import("./pages/EmailSent"));
-const PasswordResetSuccess = lazy(() => import("./pages/PasswordResetSuccess"));
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -39,37 +36,10 @@ function App() {
             />
 
             <Route
-              path="/password-reset-success"
-              element={
-                <PublicRoute>
-                  <PasswordResetSuccess />
-                </PublicRoute>
-              }
-            />
-
-            <Route
               path="/email-sent"
               element={
                 <PublicRoute>
                   <EmailSent />
-                </PublicRoute>
-              }
-            />
-
-            <Route
-              path="/reset-password/:userId/:resetString"
-              element={
-                <PublicRoute>
-                  <UpdatePassword />
-                </PublicRoute>
-              }
-            />
-
-            <Route
-              path="/forgot-password"
-              element={
-                <PublicRoute>
-                  <ForgotPassword />
                 </PublicRoute>
               }
             />

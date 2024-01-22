@@ -1,4 +1,4 @@
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo.PNG";
 import { Helmet } from "react-helmet";
 import React, { useState, useEffect, useCallback } from "react";
 import { useDispatch } from "react-redux";

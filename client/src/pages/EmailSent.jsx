@@ -3,7 +3,7 @@ import React from "react";
 function EmailSent() {
   const email = localStorage.getItem("email");
   return (
-    <div className="from-gray-50 to-blue-500 bg-gradient-to-r h-screen flex items-center justify-center p-12 py-6">
+    <div className="green bg-gradient-to-r h-screen flex items-center justify-center p-12 py-6">
       <div className="mx-auto w-full max-w-screen-lg bg-blue-700 px-5 py-10 rounded-full">
         <div className="grid gap-5 md:grid-cols-2 md:gap-10 lg:gap-20">
           <div className="flex justify-center md:justify-end">
