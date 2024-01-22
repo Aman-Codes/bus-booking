@@ -248,12 +248,13 @@ function BusForm({
             >
               <select
                 className="block border border-blue-500 w-full p-3 rounded-lg mb-4"
-                name=""
-                id=""
+                name="status"
+                id="status"
+                selected="Yet to start"
               >
-                <option value="Yet to start">Yet To Start</option>
+                <option value="Yet to start" selected>Yet To Start</option>
                 <option value="Running">Running</option>
-                <option disabled value="Completed">
+                <option value="Completed">
                   Completed
                 </option>
               </select>

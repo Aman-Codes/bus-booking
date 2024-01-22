@@ -1,9 +1,6 @@
 const User = require("../models/usersModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const PasswordReset = require("../models/passwordResetModel");
-const nodemailer = require("nodemailer");
-const { v4: uuidv4 } = require("uuid");
 require("dotenv").config();
 
 // register new user

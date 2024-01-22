@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/img/logo.PNG";
+import logo from "../assets/img/logo.png";
 import moment from "moment";
 
 function Bus({ bus }) {
@@ -8,10 +8,10 @@ function Bus({ bus }) {
   return (
     <>
       <div className="max-w-full bg-white flex flex-col rounded overflow-hidden shadow-lg">
-        <div className="flex flex-row items-baseline flex-nowrap bg-gray-100 p-2">
+        <div className="flex flex-row items-baseline flex-nowrap bg-green-100 p-2">
           <img className="h-10 w-10 rounded-full mr-4" src={logo} alt="Logo" />
           <h1 className="ml-2 uppercase font-bold">Journey Date</h1>
-          <p className="ml-2 font-base text-gray-500">{bus.journeyDate}</p>
+          <p className="ml-2 font-base text-orange-500">{bus.journeyDate}</p>
         </div>
         <div className="mt-2 flex justify-start bg-white p-2"></div>
         <div className="mt-2 flex sm:flex-row mx-6 sm:justify-between flex-wrap ">
@@ -28,7 +28,7 @@ function Bus({ bus }) {
             </p>
 
             <p className="font-bold">From </p>
-            <p className="text-gray-500">{bus.from}</p>
+            <p className="text-orange-500">{bus.from}</p>
           </div>
           <div className="flex flex-col flex-wrap p-2">
             <p className="font-bold">Arrival Time</p>
@@ -38,10 +38,10 @@ function Bus({ bus }) {
 
             <p className="font-bold">To</p>
 
-            <p className="text-gray-500">{bus.to}</p>
+            <p className="text-orange-500">{bus.to}</p>
           </div>
         </div>
-        <div className="mt-4 bg-gray-100 flex flex-row flex-wrap md:flex-nowrap justify-between items-baseline">
+        <div className="mt-4 bg-orange-100 flex flex-row flex-wrap md:flex-nowrap justify-between items-baseline">
           <div className="flex mx-6 py-4 flex-row flex-wrap">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,21 +64,6 @@ function Bus({ bus }) {
             </div>
           </div>
           <div className="md:border-l-2 mx-6 md:border-dotted flex flex-row py-4 mr-6 flex-wrap">
-            <svg
-              className="w-12 h-10 p-2 mx-2 self-center bg-green-800 rounded-full fill-current text-white"
-              viewBox="0 0 64 64"
-              pointerEvents="all"
-              aria-hidden="true"
-              role="presentation"
-              style={{
-                display: "block",
-                height: "2em",
-                width: "2em",
-                fill: "currentcolor",
-              }}
-            >
-              <path d="M62.917 38.962C59.376 53.71 47.207 64 31.833 64a31.93 31.93 0 01-21.915-8.832l-5.376 5.376a2.65 2.65 0 01-1.874.789A2.685 2.685 0 010 58.668V40a2.687 2.687 0 012.667-2.667h18.666A2.687 2.687 0 0124 40a2.645 2.645 0 01-.793 1.877L17.5 47.58a21.244 21.244 0 0032.665-4.414 33.706 33.706 0 002.208-4.873 1.292 1.292 0 011.25-.96h8a1.342 1.342 0 011.333 1.337.738.738 0 01-.041.293M64 24a2.687 2.687 0 01-2.667 2.668H42.667A2.687 2.687 0 0140 24a2.654 2.654 0 01.793-1.877l5.749-5.746a21.336 21.336 0 00-32.706 4.457 33.224 33.224 0 00-2.208 4.873 1.293 1.293 0 01-1.25.96H2.085A1.342 1.342 0 01.752 25.33v-.293C4.334 10.247 16.626 0 32 0a32.355 32.355 0 0122.041 8.832l5.419-5.376a2.644 2.644 0 011.872-.789A2.685 2.685 0 0164 5.333z"></path>
-            </svg>
             <button
               className="relative inline-flex items-center justify-start
                 px-10 py-3 overflow-hidden font-bold rounded-full

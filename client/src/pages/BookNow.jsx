@@ -31,42 +31,20 @@ function BookNow() {
     }
   }, [dispatch, params.id]);
 
-  const bookNow = async (transactionId) => {
+  const bookNow = async () => {
     try {
       dispatch(ShowLoading());
       const response = await axiosInstance.post(
         `/api/bookings/book-seat/${localStorage.getItem("user_id")}`,
         {
           bus: bus._id,
-          seats: selectedSeats,
-          transactionId,
+          seats: selectedSeats
         }
       );
       dispatch(HideLoading());
       if (response.data.success) {
         message.success(response.data.message);
         navigate("/bookings");
-      } else {
-        message.error(response.data.message);
-      }
-    } catch (error) {
-      dispatch(HideLoading());
-      message.error(error.message);
-    }
-  };
-
-  const onToken = async (token) => {
-    try {
-      dispatch(ShowLoading());
-      const response = await axiosInstance.post("/api/bookings/make-payment", {
-        token,
-        amount: selectedSeats.length * bus.price,
-      });
-
-      dispatch(HideLoading());
-      if (response.data.success) {
-        message.success(response.data.message);
-        bookNow(response.data.data.transactionId);
       } else {
         message.error(response.data.message);
       }
@@ -145,6 +123,7 @@ function BookNow() {
                         ? "animate-none cursor-not-allowed btn btn-primary py-2 px-5 rounded-full btn-disabled text-white"
                         : "animate-bounce btn btn-primary py-2 px-5 rounded-full bg-blue-600 hover:bg-blue-800 hover:duration-300 text-white"
                     }`}
+                    onClick={bookNow}
                   >
                     Pay Now
                   </button>
